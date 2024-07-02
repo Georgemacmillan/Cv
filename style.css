@@ -1,0 +1,226 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  font-family: "Cairo";
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.body{
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(6,5vh 100px 1fr);
+  grid-template-areas: 
+  "side side head head head"
+  "side side nav nav nav"
+  "side side sec sec sec"
+  "side side sec sec sec"
+  "side side sec sec sec"
+  "side side sec sec sec"
+  ;
+  background-image: linear-gradient(#061534,#506F8B)
+}
+header{
+  background:transparent;
+  grid-area: head
+}
+section{
+  background:transparent;
+  grid-area:sec;
+}
+nav{
+  background:transparent;
+  grid-area: nav
+}
+aside{
+  background-image:Url(./360_F_304663958_t6mfBgdngh8q0eeGsW5kTA4hDU5DkceU.jpg);
+  grid-area: side;
+  background-size: 50px;
+  height:100vh;
+  
+}
+.img{
+  width: 80px;
+  border-radius: 50%;
+}
+.line{
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(90deg,#061534,#506F8B);
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.line2{
+  width: 100%;
+  height: 100px;
+  background-image:linear-gradient(90deg,#506F8B,#061534);
+  transform: translate(0,5vh);
+  display: block;
+  z-index: -1
+}
+.name{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+.info{
+  background-color:#EEEEEEBF;
+  height: 175px;
+  width:100%;
+  position: relative;
+  top: 5vh;
+}
+
+.phoneimg{
+  font-size: 1.3rem;
+  position:relative;
+  top: 20px;
+  left: 15px;
+}
+.num{
+  text-decoration: none;
+  color: initial;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+  left: 20px;
+}
+.num:hover{
+  text-decoration: underline;
+}
+
+.eml{
+  position: relative;
+  top: 50px;
+  left: 15px;
+  font-size: 1.3rem;
+}
+
+.email{
+  text-decoration: none;
+  color: initial;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  top: 45px;
+  left: 20px;
+}
+.email:hover{
+  text-decoration: underline;
+}
+
+.locic{
+  width: 2rem;
+  position: relative;
+  top: 70px;
+  left: 10px;
+}
+
+.loc{
+  text-decoration: none;
+  color: initial;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+  left: 40px;
+}
+
+.doc{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid yellow;
+  padding: 10px;
+}
+
+ul{
+  color: white;
+  padding: 10px;
+  list-style-type: square
+}
+
+li{
+  margin: 15px;
+  margin-left: 10px;
+}
+.logo{
+  width: 100px;
+  position: relative;
+  left: 75px;
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite
+}
+@keyframes animation{
+  0%{
+    opacity: 0.1;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity: 0.1;
+  }
+}
+
+@media (min-width:700px){
+  
+  .info{
+    height: 300px;
+  }
+  .name{
+    font-size: 30px;
+  }
+  .img{
+    width: 100px ;
+  }
+  .doc{
+    font-size: 25px
+  }
+  li{
+    font-size: 30px;
+    margin: 25px ;
+    margin-left: 25px;
+    margin-top: 50px;
+  }
+  .phoneimg{
+    font-size: 3rem;
+  }
+  .num{
+    font-size: 1.5rem
+  }
+  .eml{
+    font-size: 3rem
+  }
+  .email{
+    font-size: 1.5rem
+  }
+  .locic{
+    left: 0px;
+    width: 5rem ;
+  }
+  .loc{
+    font-size: 1.5rem;
+    position: relative;
+    top:0px;
+    left: 80px ;
+  }
+  .logo{
+    width: 250px;
+    left: 150px ;
+    top: 100px;
+  }
+}
